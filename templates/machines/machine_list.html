@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="machines">
+    <h2>Our Machines</h2>
+
+    <div class="machine-grid">
+        {% for machine in machines %}
+        <div class="machine-card">
+            {% if machine.image %}
+                <img src="{{ machine.image.url }}" width="100%">
+            {% endif %}
+            <h3>{{ machine.name }}</h3>
+            <p>{{ machine.description }}</p>
+            <p>₹{{ machine.daily_rate }}/day</p>
+
+            {% if machine.is_available %}
+                <p style="color: green;">Available</p>
+            {% else %}
+                <p style="color: red;">Not Available</p>
+            {% endif %}
+
+            <!-- ADD THIS BUTTON -->
+<a href="/booking/{{ machine.id }}/" class="btn">Book Now</a>
+        </div>
+        {% endfor %}
+    </div>
+
+</section>
+
+{% endblock %}

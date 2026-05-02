@@ -1,0 +1,126 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #0a2540;
+    color: white;
+    padding: 15px 0;
+}
+
+.logo {
+    display: inline;
+}
+
+.nav-links {
+    float: right;
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    height: 80vh;
+    background: linear-gradient(to right, #0a2540, #1c3d5a);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: orange;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* SERVICES */
+.services {
+    padding: 50px;
+    text-align: center;
+}
+
+.service-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+}
+
+/* MACHINES */
+.machines {
+    padding: 50px;
+    text-align: center;
+}
+
+.machine-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.machine-card {
+    background: #e8f0fe;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+.footer {
+    background: #0a2540;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}.booking-section {
+    width: 50%;
+    margin: 40px auto;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-form input,
+.booking-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+}
