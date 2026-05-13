@@ -17,10 +17,27 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
+    # Admin Panel
     path('admin/', admin.site.urls),
+
+    # Core Website
     path('', include('core.urls')),
+
+    # Machines
     path('machines/', include('machines.urls')),
+
+    # Bookings
     path('booking/', include('bookings.urls')),
+
+    # Dashboard
+    path('dashboard/', include('dashboard.urls')),
+    path('chatbot/', include('chatbot.urls')),
 ]
+
+# Media Files
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
